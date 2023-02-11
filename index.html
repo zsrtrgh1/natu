@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="夏は来ぬ" />
+    <meta
+      property="og:description"
+      content="「夏は来ぬ」のピアノと歌のループ再生を行います。3番までのループ再生も可能です。"
+    />
+    <meta
+      property="og:image"
+      content="https://zsrtrgh1.github.io/natu/unohana.jpg"
+    />
+    <title>夏は来ぬ</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+      * {
+        -webkit-user-drag: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        font-family: "Klee One", cursive;
+        font-weight: 600;
+      }
+      body > * {
+        width: 70vw;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        animation: bodyAnimation 7s ease-in;
+      }
+      body > :not(h1, hr) {
+        padding: 0 1em 0;
+      }
+      h1 {
+        margin: 1em auto 1em;
+      }
+      hr {
+        color: #304ffe;
+        height: 0.1px;
+      }
+      div > p {
+        font-weight: 400;
+      }
+      h2 ~ * {
+        margin-left: 3em;
+      }
+      li * {
+        font-size: 1.1rem;
+        padding: 0.1em auto 0.1em;
+      }
+      rt {
+        font-size: 0.8rem;
+      }
+      input[type="checkbox"] {
+        margin-right: 0.5em;
+      }
+      label {
+        margin-top: 1em;
+      }
+      @keyframes bodyAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(-15%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+    </style>
+  </head>
+  <body oncontextmenu="return false;">
+    <h1>夏は来ぬ</h1>
+    <hr />
+    <div>
+      <h2>ピアノ</h2>
+      <audio
+        controls
+        loop
+        controlslist="nodownload"
+        src="piano.mp3"
+        id="piano"
+      ></audio>
+    </div>
+    <div>
+      <h2>歌</h2>
+      <audio
+        controls
+        loop
+        controlslist="nodownload"
+        src="voice.mp3"
+        id="voice"
+      ></audio>
+      <label for="three"
+        ><input type="checkbox" id="three" />歌詞の三番までをループ</label
+      >
+    </div>
+    <div>
+      <h2>歌詞</h2>
+      <p>作詞 : 佐佐木信綱</p>
+      <p>作曲 : 小山作之助</p>
+      <ol>
+        <li class="lyric">
+          <p onclick="pianoPlay(12);">
+            <span>
+              卯の花の匂う垣根に
+              <ruby>
+                <rb>時鳥</rb>
+                <rp>（</rp>
+                <rt>ほととぎす</rt>
+                <rp>）</rp>
+              </ruby>
+              早も来鳴きて</span
+            ><span>
+              <ruby>
+                <rb>忍音</rb>
+                <rp>（</rp>
+                <rt>しのびね</rt>
+                <rp>）</rp>
+              </ruby>
+              もらす夏は来ぬ
+            </span>
+          </p>
+        </li>
+        <li class="lyric">
+          <p onclick="pianoPlay(35);">
+            さみだれのそそぐ山田に
+            <ruby>
+              <rb>早乙女</rb>
+              <rp>（</rp>
+              <rt>さおとめ</rt>
+              <rp>）</rp> </ruby
+            >が
+            <ruby>
+              <rb>裳裾</rb>
+              <rp>（</rp>
+              <rt>もすそ</rt>
+              <rp>）</rp>
+            </ruby>
+            ぬらして　
+            <ruby>
+              <rb>玉苗</rb>
+              <rp>（</rp>
+              <rt>たまなえ</rt>
+              <rp>）</rp>
+            </ruby>
+            植うる夏は来ぬ
+          </p>
+        </li>
+        <li class="lyric">
+          <p onclick="pianoPlay(57);">
+            <ruby>
+              <rb>橘</rb>
+              <rp>（</rp>
+              <rt>たちばな</rt>
+              <rp>）</rp>
+            </ruby>
+            の薫るのきばの窓近く蛍飛びかい　おこたり
+            <ruby>
+              <rb>諫</rb>
+              <rp>（</rp>
+              <rt>いさ</rt>
+              <rp>）</rp>
+            </ruby>
+            むる夏は来ぬ
+          </p>
+        </li>
+        <li class="lyric">
+          <p onclick="pianoPlay(93);">
+            <ruby>
+              <rb>楝</rb>
+              <rp>（</rp>
+              <rt>おうち</rt>
+              <rp>）</rp>
+            </ruby>
+            ちる川べの宿の
+            <ruby>
+              <rb>門</rb>
+              <rp>（</rp>
+              <rt>かど</rt>
+              <rp>）</rp>
+            </ruby>
+            遠く　
+            <ruby>
+              <rb>水鶏</rb>
+              <rp>（</rp>
+              <rt>くいな</rt>
+              <rp>）</rp>
+            </ruby>
+            声して　
+            <ruby>
+              <rb>夕月</rb>
+              <rp>（</rp>
+              <rt>ゆうづき</rt>
+              <rp>）</rp>
+            </ruby>
+            すずしき夏は来ぬ
+          </p>
+        </li>
+        <li class="lyric">
+          <p onclick="pianoPlay(116);">
+            <ruby>
+              <rb>五月闇</rb>
+              <rp>（</rp>
+              <rt>さつきやみ</rt>
+              <rp>）</rp>
+            </ruby>
+            蛍飛びかい
+            <ruby>
+              <rb>水鶏</rb>
+              <rp>（</rp>
+              <rt>くいな</rt>
+              <rp>）</rp>
+            </ruby>
+            鳴き　
+            <ruby>
+              <rb>卯</rb>
+              <rp>（</rp>
+              <rt>う</rt>
+              <rp>）</rp>
+            </ruby>
+            の花咲きて　
+            <ruby>
+              <rb>早苗</rb>
+              <rp>（</rp>
+              <rt>さなえ</rt>
+              <rp>）</rp>
+            </ruby>
+            植えわたす夏は来ぬ
+          </p>
+        </li>
+      </ol>
+    </div>
+    <script>
+      var three = document.getElementById("three");
+      var piano = document.getElementById("piano");
+      var voice = document.getElementById("voice");
+      var lyric = document.getElementsByClassName("lyric");
+      const LIMIT = 80.7;
 
+      piano.addEventListener("timeupdate", function () {
+        if (three.checked && piano.currentTime >= LIMIT) {
+          piano.currentTime = 0;
+          piano.play();
+        }
+      });
+      voice.addEventListener("timeupdate", function () {
+        if (three.checked && voice.currentTime >= LIMIT - 5.2) {
+          voice.currentTime = 0;
+          voice.play();
+        }
+      });
+      function allBlack() {
+        lyric[0].style.color = "#000000";
+        lyric[1].style.color = "#000000";
+        lyric[2].style.color = "#000000";
+        lyric[3].style.color = "#000000";
+        lyric[4].style.color = "#000000";
+      }
+      piano.addEventListener("timeupdate", function () {
+        if (piano.currentTime >= 142) {
+          allBlack();
+        } else if (piano.currentTime >= 116) {
+          allBlack();
+          lyric[4].style.color = "#304FFE";
+        } else if (piano.currentTime >= 93) {
+          allBlack();
+          lyric[3].style.color = "#304FFE";
+        } else if (piano.currentTime >= 80) {
+          allBlack();
+        } else if (piano.currentTime >= 57) {
+          allBlack();
+          lyric[2].style.color = "#304FFE";
+        } else if (piano.currentTime >= 35) {
+          allBlack();
+          lyric[1].style.color = "#304FFE";
+        } else if (piano.currentTime >= 12) {
+          allBlack();
+          lyric[0].style.color = "#304FFE";
+        } else {
+          allBlack();
+        }
+      });
+      function pianoPlay(time) {
+        piano.currentTime = time;
+        piano.play();
+      }
+    </script>
+  </body>
+</html>
